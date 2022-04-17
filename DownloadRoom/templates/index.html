@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'DownloadRoom/index.css' %}">
+</head>
+<body>
+    <div id="DownloaderDiv">
+        <h1 id ="Title">Youtube Downloader</h1>
+        <form method="POST" action="" >
+            {% csrf_token %}
+            <div id="MainContainer">
+                
+                <div id="InputContainer">
+                    <div id="InputDiv"><input id="InputBox" type="text" placeholder="Paste your link here" name="youtube_link"></div>
+                </div>
+                <input id="SubmitButton" type="submit" value="Download">
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
